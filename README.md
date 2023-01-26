@@ -1,11 +1,4 @@
 # Personal Portfolio with ReactJS | Project On Hold
-
-### Live [Demo on Github Pages](houdaibr.github.io/)
-
-You can check also :
-
-#### French Version on a seperate branch [deployed on Netlify](https://houdaibr-eportfolio.netlify.app/)
-
 ## Features
 
 **📖 Multi-Page Layout**
