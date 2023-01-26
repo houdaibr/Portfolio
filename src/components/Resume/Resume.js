@@ -5,8 +5,7 @@ import Particle from "../Particle";
 import Resumecontent from "./ResumeContent";
 import "../../style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import CV from "../../Assets/CV.pdf";
-
+import CV from "../../Assets/Projects/CV.pdf";
 function Resume() {
   return (
     <Container fluid className="resume-section">
@@ -16,10 +15,7 @@ function Resume() {
           <Button variant="primary" href={CV} target="_blank">
             <i className="fas fa-download">&nbsp;</i>Download Resume
           </Button>
-          &nbsp; &nbsp;
-          <Button variant="primary" href={CV} target="_blank">
-            <i className="fas fa-download">&nbsp;</i>Télécharger CV
-          </Button>
+         
         </Row>
         <Row className="resume">
           <Col md={6} className="resume-left">
@@ -96,10 +92,8 @@ function Resume() {
           <Button variant="primary" href={CV} target="_blank">
             <i className="fas fa-download">&nbsp;</i>Download Resume
           </Button>
-          &nbsp; &nbsp;
-          <Button variant="primary" href={CV} target="_blank">
-            <i className="fas fa-download">&nbsp;</i>Télécharger CV
-          </Button>
+         
+          
         </Row>
       </Container>
     </Container>
