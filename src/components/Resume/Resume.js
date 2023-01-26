@@ -89,9 +89,7 @@ function Resume() {
           </Col>
         </Row>
         <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Button variant="primary" href={CV} target="_blank">
-            <i className="fas fa-download">&nbsp;</i>Download Resume
-          </Button>
+          
          
           
         </Row>
