@@ -53,7 +53,6 @@ function About() {
 
           <Techstack iconName="devicon-firebase-plain" />
           <Techstack iconName="devicon-mysql-plain" />
-          <Techstack iconName="devicon-mysql-plain" />
           <Techstack iconName="devicon-android-plain" />
           <Techstack iconName="devicon-flutter-plain" />
           <Techstack iconName="devicon-git-plain-wordmark" />
