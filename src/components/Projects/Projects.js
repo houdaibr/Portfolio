@@ -96,9 +96,9 @@ function Projects() {
         
         </Row>
         <h1 className="project-heading">
-          My  <strong className="purple">Web Design  </strong> Projects
+          My  <strong className="purple">Web &  Mobile Design  </strong> Projects
         </h1>
-        <p style={{ color: "white" }}>Do give a read to some of my posts</p>
+        <p style={{ color: "white" }}>Do give a read to some of my management project  </p>
         <Row style={{ justifyContent: "center" }}>
         <Col md={4} className="project-card">
             <ProjectCard
