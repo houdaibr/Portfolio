@@ -11,9 +11,9 @@ function Resume() {
     <Container fluid className="resume-section">
       <Particle />
       <Container>
-        <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Button variant="primary" href={CV} target="_blank">
-            <i className="fas fa-download">&nbsp;</i>Download Resume
+        <Row style={{ justifyContent: "center",position: "relative" }}>
+          <Button variant="primary" href={CV} target="_blank" className="downloadbutton">
+            <i className="fas fa-download">&nbsp;</i>Download CV
           </Button>
          
         </Row>
@@ -21,7 +21,7 @@ function Resume() {
           <Col md={6} className="resume-left">
           <h3 className="resume-title">Education</h3>
             <Resumecontent
-              title="Institut National Des Postes Et Télécommunications, Rabat, Morocco"
+              title="National Institute of Posts and Telecommunications, Rabat, Morocco"
               date="2021 - 2024"
               content={["Advanced Software Engineering for Digital Services"]}
             />

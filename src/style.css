@@ -732,3 +732,6 @@ html {
 .fork-btn-inner::after {
   display: none !important;
 }
+.downloadbutton{
+  margin-top: 30px;
+}
