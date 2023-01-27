@@ -6,6 +6,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about1.svg";
+import Github from "./Github";
+
 
 function About() {
   return (
@@ -67,7 +69,7 @@ function About() {
           <Techstack iconName="devicon-unity-original" />
           
         </Row>
-      </Container>
+              </Container>
     </Container>
   );
 }
