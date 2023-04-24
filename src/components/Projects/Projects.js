@@ -7,6 +7,8 @@ import "../../style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import salva from "../../Assets/salva.png";
 import salvalandingpage from "../../Assets/Projects/salvalandingpage.PNG";
+import AskBricall from "../../Assets/askBricall.png";
+
 
 import rapport from "../../Assets/Projects/rapport.pdf";
 
@@ -34,6 +36,16 @@ function Projects() {
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
         <Col md={4} className="project-card">
+        <ProjectCard
+              imgPath={AskBricall}
+              isBlog={false}
+              title="AskBricall"
+              description="It is an online platform that connects technicians with clients, allowing them to discover the profiles of qualified professionals in each field. Technicians can publish their achievements over time, offering clients a glimpse of their expertise in their field of specialisation.. The project was built using : React Js, Spring Boot, PostgreSQL, Figma."
+              link="https://github.com/BenomarAchraf/Bricall"
+            />
+                      </Col>
+                      <Col md={4} className="project-card">
+
             <ProjectCard
               imgPath={salva}
               isBlog={false}
@@ -41,7 +53,8 @@ function Projects() {
               description="Safety system that alerts both the lifeguard through a mobile application and an autonomous board to recover the swimmer in case of drowning. The project was built using : Flutter, Node Js, Fire base, Figma."
               link="https://github.com/hamzabla/Salva_odc_Project/"
             />
-          </Col>
+                      </Col>
+
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={salvalandingpage}
