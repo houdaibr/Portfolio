@@ -1,46 +1,40 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 import "../../style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import homeLogo from "../../Assets/me1.png";
-import Particle from "../Particle";
-import Home2 from "./Home2";
-import Type from "./Type";
 
 function Home() {
   return (
     <section>
       <Container fluid className="home-section" id="home">
-        <Particle />
         <Container className="home-content">
-          <Row>
-            <Col md={7} className="home-header">
-              <h1 style={{ paddingBottom: 15 }} className="heading">
-                Hello World!<span className="wave">👋🏻</span>
+          <Row className="align-items-center">
+            <Col md={9} className="home-header">
+              <h1 className="hero-headline">
+                Building scalable systems where{" "}
+                <span className="purple">distributed infrastructure</span>{" "}
+                meets <span className="purple">AI</span>.
               </h1>
-
-              <h1 className="heading-name">
-                I'm
-                <strong className="main-name"> EL IBRAHIMI</strong>
-              </h1>
-
-              <div style={{ padding: 45, textAlign: "left" }}>
-                <Type />
+              <p className="hero-intro">
+                Hi, I'm <strong className="main-name">Houda EL Ibrahimi</strong>{" "}
+                — Software Engineer at Oracle, building scalable, cloud-native
+                systems at the intersection of distributed infrastructure and
+                Artificial Intelligence.
+              </p>
+              <div className="hero-actions">
+                <Button as={Link} to="/project" className="fork-btn-inner hero-btn">
+                  View Projects
+                </Button>
+                <Link to="/about" className="more-about-link hero-more-link">
+                  More about me →
+                </Link>
               </div>
-            </Col>
-
-            <Col md={5} className="m-auto">
-              <img
-                src={homeLogo}
-                style={{ width: "75%" }}
-                alt="home pic"
-                className="d-block mx-auto img-fluid"
-              />
             </Col>
           </Row>
         </Container>
       </Container>
-      <Home2 />
     </section>
   );
 }

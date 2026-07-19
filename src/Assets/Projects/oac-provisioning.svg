@@ -1,0 +1,42 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="obg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#160e28"/>
+      <stop offset="100%" stop-color="#0c0818"/>
+    </linearGradient>
+    <radialGradient id="oglow2" cx="50%" cy="0%" r="75%">
+      <stop offset="0%" stop-color="#BD296B" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#BD296B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#obg2)"/>
+  <rect width="800" height="500" fill="url(#oglow2)"/>
+
+  <g transform="translate(400,180)" fill="none" stroke="#e978ab" stroke-width="2.5" opacity="0.85">
+    <path d="M 0 -75 L 65 -37 L 65 37 L 0 75 L -65 37 L -65 -37 Z"/>
+  </g>
+  <g transform="translate(400,180)" fill="#ffffff">
+    <circle cx="0" cy="0" r="5"/>
+    <path d="M -18 8 L 0 -14 L 18 8 Z" fill="#a89bf7" opacity="0.9"/>
+  </g>
+  <g stroke="#e978ab" stroke-width="1.5" opacity="0.6" fill="none">
+    <path d="M 260 180 L 210 130"/>
+    <path d="M 540 180 L 590 130"/>
+  </g>
+  <circle cx="200" cy="120" r="18" fill="none" stroke="#a89bf7" stroke-width="2" opacity="0.8"/>
+  <circle cx="600" cy="120" r="18" fill="none" stroke="#a89bf7" stroke-width="2" opacity="0.8"/>
+
+  <text x="400" y="410" text-anchor="middle" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Cluster Provisioning</text>
+  <text x="400" y="445" text-anchor="middle" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="18" fill="#c9a3b8">&amp; Debugging Automation</text>
+
+  <g font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="13" fill="#ffffff">
+    <rect x="255" y="460" width="55" height="24" rx="12" fill="#BD296B" opacity="0.35"/>
+    <text x="282" y="476" text-anchor="middle">OKE</text>
+    <rect x="320" y="460" width="55" height="24" rx="12" fill="#BD296B" opacity="0.35"/>
+    <text x="347" y="476" text-anchor="middle">OCI</text>
+    <rect x="385" y="460" width="95" height="24" rx="12" fill="#BD296B" opacity="0.35"/>
+    <text x="432" y="476" text-anchor="middle">Terraform</text>
+    <rect x="490" y="460" width="105" height="24" rx="12" fill="#BD296B" opacity="0.35"/>
+    <text x="542" y="476" text-anchor="middle">Automation</text>
+  </g>
+</svg>

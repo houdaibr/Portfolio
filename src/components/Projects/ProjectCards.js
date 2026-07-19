@@ -19,7 +19,7 @@ function ProjectCards(props) {
         <div  href={props.rapport}></div>
         <Button variant="primary" href={props.link} target="_blank">
           <i className="cil-external-link">&nbsp;</i>
-          {props.isBlog ? "View Blog" : "View Project"}
+          {props.ctaLabel || (props.isBlog ? "View Blog" : "View Project")}
         </Button>
       </Card.Body>
     </Card>

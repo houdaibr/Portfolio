@@ -1,137 +1,69 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import ProjectCard from "./ProjectCards";
-import BlogCard from "./BlogsCards";
-import Particle from "../Particle";
+import ProjectItem from "./ProjectItem";
 import "../../style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import salva from "../../Assets/salva.png";
-import salvalandingpage from "../../Assets/Projects/salvalandingpage.PNG";
-import AskBricall from "../../Assets/askBricall.png";
 
 
-import rapport from "../../Assets/Projects/rapport.pdf";
-
-
-import devopsproject from "../../Assets/Projects/projet-docker.png";
-
-import eventscroller from "../../Assets/Projects/eventscroller.png";
-import phonestore from "../../Assets/Projects/phonestore.png";
-import tazaproject from "../../Assets/Projects/taza.PNG";
-import webdesignproject from "../../Assets/Projects/login.png";
-import jober from "../../Assets/Projects/jober.png";
-import marketing from "../../Assets/Projects/marketing.pdf";
-
+const projects = [
+  {
+    title: "MCommerce",
+    bullets: [
+      "Built a microservices e-commerce platform of 6 independently deployable services communicating over gRPC/GraphQL (synchronous) and RabbitMQ events (asynchronous).",
+      "Managed traffic routing, retries, and resilience between services with an Istio service mesh.",
+      "Automated the full deployment pipeline on Kubernetes with GitLab CI and ArgoCD.",
+    ],
+    tech: [
+      "Kubernetes",
+      "Istio",
+      "gRPC",
+      "GraphQL",
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "RabbitMQ",
+    ],
+    link: "https://github.com/houdaibr/E-commerce-Microservices-Application",
+  },
+  {
+    title: "Legal AI",
+    bullets: [
+      "Automated the first pass of legal contract review by extracting key clauses from unstructured documents with NLP.",
+      "Scored clause-level risk via sentiment and pattern analysis to surface what needs a lawyer's attention first.",
+      "Added a rephrasing model that translates dense legal language into plain-English explanations for non-lawyers.",
+    ],
+    tech: ["NLP", "Flask", "Next.js", "TypeScript", "Docker"],
+    link: "https://github.com/taouchikhtkhouloud/Legal-AI-Project",
+  },
+  {
+    title: "Confluence AI Summarizer",
+    bullets: [
+      "Built a Gen AI plugin at Oracle's OraHacks hackathon that indexes a Confluence space and answers questions in natural language.",
+      "Grounded LLM responses in the team's actual Confluence content for accurate, product-specific answers.",
+      "Cut the time engineers spend searching for information by 50%.",
+    ],
+    tech: ["Gen AI", "LLM", "OCI", "Confluence API"],
+    link: "",
+  },
+];
 
 function Projects() {
   return (
     <Container fluid className="project-section">
-      <Particle />
       <Container>
         <h1 className="project-heading">
-          My Coding <strong className="purple">Works </strong>
+          Personal <strong className="purple">Projects</strong>
         </h1>
-        <p style={{ color: "white" }}>
-          Here are the projects I've worked on recently.
+        <p>
+          Personal & hackathon projects built alongside my work at Oracle. More
+          on the way.
         </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-        <Col md={4} className="project-card">
-        <ProjectCard
-              imgPath={AskBricall}
-              isBlog={false}
-              title="AskBricall"
-              description="It is an online platform that connects technicians with clients, allowing them to discover the profiles of qualified professionals in each field. Technicians can publish their achievements over time, offering clients a glimpse of their expertise in their field of specialisation.. The project was built using : React Js, Spring Boot, PostgreSQL, Figma."
-              link="https://github.com/BenomarAchraf/Bricall"
-            />
-                      </Col>
-                      <Col md={4} className="project-card">
-
-            <ProjectCard
-              imgPath={salva}
-              isBlog={false}
-              title="Salva"
-              description="Safety system that alerts both the lifeguard through a mobile application and an autonomous board to recover the swimmer in case of drowning. The project was built using : Flutter, Node Js, Fire base, Figma."
-              link="https://github.com/hamzabla/Salva_odc_Project/"
-            />
-                      </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={salvalandingpage}
-              isBlog={false}
-              title="Salva Landing page"
-              lien="https://www.salva.social/"
-              description="Landing page of salva project build with : React Js, Figma "
-              link ="https://github.com/houdaibr/Landing-Page-of-Salva"
-            />
+        <Row style={{ justifyContent: "center", paddingTop: "20px" }}>
+          <Col md={11} lg={10}>
+            {projects.map((p, i) => (
+              <ProjectItem key={i} {...p} />
+            ))}
           </Col>
-         
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={devopsproject}
-              isBlog={false}
-              title="Online Free Downloader"
-              description="It is a project which I deployed, containerized a 3-tier application composed of frontend, backend and database developed with the MERN stack (MongoDB, Express, React, Node.js) and which allows to download from a link the coresspondant file using the 2 containerization tools : Docker & Kubernetess"
-              link="https://github.com/houdaibr/Docker-Kubernetess-Project"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={ eventscroller }
-              isBlog={false}
-              title=" Event Scroller"
-              description="
-              EventScroller is a web application that allows its users to meet new people, learn new things, find help, get out of their comfort zone and pursue their passions together.This project was built using : React Js , Node Js "
-              link="https://github.com/houdaibr/EventScroller-PFA"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={phonestore}
-              isBlog={false}
-              title=" Phone Store"
-              lien="https://ourphone-store.netlify.app/"
-              description="E-commerce website using React jS & firebase"
-              link="https://github.com/houdaibr/site--commerce"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={tazaproject}
-              isBlog={false}
-              title="Taza Tourism"
-              description="a web platform that allows you to explore hotels, restaurants, places to visit and activities to do for tourists in the Region of Taza.this project was built using basic web developpement tools: html , CSS and Javascript."
-              link="https://github.com/houdaibr/tahlatourisme"
-            />
-          </Col>
-        
-        </Row>
-        <h1 className="project-heading">
-          My  <strong className="purple">Web &  Mobile Design  </strong> Projects
-        </h1>
-        <p style={{ color: "white" }}>Do give a read to some of my management project  </p>
-        <Row style={{ justifyContent: "center" }}>
-        <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={webdesignproject}
-              isBlog={false}
-              title="Para IN"
-              description="This is a project in which we applied the UX/UI design approach to create an MVP for a mobile application for the management of INPT's parascoal activities."
-              link={rapport}
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={jober}
-              isBlog={false}
-              title="Jober"
-              description="It is a project that implements the business model canva and a digital communication plan for Jober internship search website according to custom criteria."
-              link={marketing}
-            />
-          </Col>
-
         </Row>
       </Container>
     </Container>
